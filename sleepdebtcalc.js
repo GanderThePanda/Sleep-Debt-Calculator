@@ -1,4 +1,4 @@
-function getSleepHours(day) {
+function getSleepHours(day) {             //Function to return how many hours I slept each night.
     switch(day) {
       case "monday":
         return 6;
@@ -26,7 +26,7 @@ function getSleepHours(day) {
       };
   };
   
-  function actualSleepHours() {
+  function actualSleepHours() {         //Function to sum up my hours of sleep for the week.
     return getSleepHours("monday") +
     getSleepHours("tuesday") +
     getSleepHours("wednesday") +
@@ -36,10 +36,10 @@ function getSleepHours(day) {
     getSleepHours("sunday");
   };
   
-  const idealSleepHours = 56;
-  const differenceSleepHours = actualSleepHours() - idealSleepHours;
+  const idealSleepHours = 56; //Variable for my ideal sleep hours a week (8 hours a day).
+  const differenceSleepHours = actualSleepHours() - idealSleepHours; //A variable to make the following code more readable.
   
-  function sleepDebt() {
+  function sleepDebt() {  // Main function that determines if you slept enough during the week or not.
     if (differenceSleepHours > 0) {
       return "You are sleeping more than enough! You are over sleeping by " + differenceSleepHours + " Hours.";}
       else if (differenceSleepHours < 0) {
@@ -48,4 +48,4 @@ function getSleepHours(day) {
       return "You slept perfect!";}
   };
   
-  console.log(sleepDebt());
+  console.log(sleepDebt()); //Execution to console.
